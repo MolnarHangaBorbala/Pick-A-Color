@@ -6,16 +6,16 @@ Egy egyszerű webalkalmazás, amely lehetővé teszi, hogy kiválassz egy színt
 
 ## Fő funkciók
 
-- Színválasztó input a felhasználó számára
-- Képkeresés az Unsplash API-n keresztül a színnév alapján (ntc.js segítségével)
-- Képek szűrése a LAB színtér alapú színösszetétel elemzésével
-- Csak a releváns képek jelennek meg, amelyek legalább 70%-ban tartalmazzák a kiválasztott színt
+- Színválasztó input a felhasználó számára.
+- Képkeresés az Unsplash API-n keresztül a színnév alapján (ntc.js segítségével).
+- Képek szűrése a LAB színtér alapú színösszetétel elemzésével.
+- Csak a releváns képek jelennek meg, amelyek legalább 70%-ban tartalmazzák a kiválasztott színt.
 
 ---
 
 ## Használat
 
-1. Nyisd meg a `index.html` fájlt egy böngészőben.
+1. Nyisd meg a `Color.html` fájlt egy böngészőben.
 2. Válassz egy színt a színválasztóból.
 3. Kattints a "Keresés képekre" gombra.
 4. Várj, amíg a program lekéri a képeket, majd megjeleníti a relevánsakat.
@@ -30,29 +30,16 @@ Az alkalmazás az [Unsplash API](https://unsplash.com/developers) használatáva
 
 ## Műszaki részletek
 
-- A színnév kereséshez az [ntc.js (Name That Color)](https://github.com/colorjs/ntc) könyvtárat használjuk.
-- A képek színösszetételét canvas segítségével elemezzük.
+- A színnév kereséshez az [ntc.js (Name That Color)]([https://github.com/colorjs/ntc](https://github.com/insomnious0x01/ntc-js/blob/master/ntc.js)) könyvtárat használom.
+- A képek színösszetételét canvas segítségével elemzem.
 - A színillesztés LAB színtéren és ΔE 1976 távolságmérés alapján történik.
 
 ---
 
 ## Jövőbeli fejlesztések ötletei
 
-- Több szín támogatása és komplexebb színpaletta elemzés
-- Sebességoptimalizálás (például kép méretének csökkentése elemzés előtt)
-- Felhasználói felület továbbfejlesztése
+- Több szín támogatása és komplexebb színpaletta elemzés.
+- Sebességoptimalizálás (például kép méretének csökkentése elemzés előtt).
+- Felhasználói felület továbbfejlesztése.
 
 ---
-
-## License
-
-Ez a projekt nyílt forráskódú, használható szabadon személyes és oktatási célokra.
-
----
-
-## Kapcsolat
-
-Ha kérdésed van vagy javaslatod, keress bátran!
-
----
-
