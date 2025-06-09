@@ -66,3 +66,9 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 ![image](https://github.com/user-attachments/assets/a2ed5a95-0c51-4474-9649-6fe22c24d7e1)
 
 ---
+
+
+Configuration for pick-a-color-project
+pick-a-color-project.netlify.app
+Deploys from GitHub.
+Last update at 2025.06.09 4:15 AM.
