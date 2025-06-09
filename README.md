@@ -1,4 +1,4 @@
-# Color Picker Site – Pick-A-Color
+# Szín alapján képek keresése – Pick-A-Color
 
 [![Live on Netlify](https://img.shields.io/badge/Live_on-Netlify-brightgreen?style=for-the-badge&logo=netlify&logoColor=white)](https://pick-a-color-project.netlify.app)
 
