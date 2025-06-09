@@ -1,6 +1,11 @@
 # Color Picker Site – Pick-A-Color
 
+[![Live on Netlify](https://img.shields.io/badge/Live_on-Netlify-brightgreen?style=for-the-badge&logo=netlify&logoColor=white)](https://pick-a-color-project.netlify.app)
+
 Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kiválassz egy tetszőleges színt, majd az alapján automatikusan képeket keressen az Unsplash vagy Pexels oldalról. A cél, hogy a megjelenített képek színvilága harmonizáljon a kiválasztott árnyalattal.
+
+**Élő demó:**  
+[https://pick-a-color-project.netlify.app](https://pick-a-color-project.netlify.app)
 
 ---
 
