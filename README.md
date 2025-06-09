@@ -51,13 +51,12 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 
 ##   Jövőbeli fejlesztések
 
--    Színanalízis: a `canvas` elem és JavaScript segítségével lehetőség van képek színösszetételének elemzésére.
--    Színillesztés tervezett módja: CIELAB (LAB) színtér és ΔE 1976 távolságmérés a pontosabb színazonosításhoz (jelenleg nem aktív).
--    Képek automatikus szűrése a kiválasztott szín LAB színtérbeli távolsága alapján (ΔE).
--    Teljesítményoptimalizálás (pl. kis méretű képek elemzése canvas segítségével).
--    Drag-and-drop képkeresés vagy pipetta eszköz.
--    Automatikus színazonosítás a képek pixelalapú elemzése alapján.
--    Sebességoptimalizálás (például kép méretének csökkentése elemzés előtt).
+-    Képek színösszetételének elemzése HTML5 canvas segítségével.
+-    Pontosabb színillesztés CIELAB (LAB) színtér és ΔE 1976 távolságmérés alapján (jelenleg nem aktív).
+-    Automatikus kép szűrés a kiválasztott szín LAB színtérbeli távolsága (ΔE) alapján.
+-    Teljesítmény- és sebességoptimalizálás (például képek méretének csökkentése elemzés előtt).
+-    Drag-and-drop képkeresés vagy pipetta eszköz integrálása.
+-    Automatikus színazonosítás pixelalapú kép elemzéssel.
 -    Felhasználói felület továbbfejlesztése.
 
 ---
