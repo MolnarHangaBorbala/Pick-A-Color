@@ -31,7 +31,7 @@ Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kivá
 
 ---
 
-## 🔐 API kulcsok
+## API kulcsok
 
 Az alkalmazás működéséhez két API kulcsra van szükséged:
 
@@ -49,7 +49,7 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 
 ---
 
-##   Jövőbeli fejlesztések
+## Jövőbeli fejlesztések
 
 -    Képek színösszetételének elemzése HTML5 canvas segítségével.
 -    Pontosabb színillesztés CIELAB (LAB) színtér és ΔE 1976 távolságmérés alapján (jelenleg nem aktív).
@@ -61,8 +61,8 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 
 ---
 
-##   Képernyőkép
+## Képernyőkép
 
-![image](https://github.com/user-attachments/assets/77452b33-7ca5-44b4-b3e3-0043559d0196)
+![image](https://github.com/user-attachments/assets/a2ed5a95-0c51-4474-9649-6fe22c24d7e1)
 
 ---
