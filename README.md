@@ -82,3 +82,9 @@ Configuration for pick-a-color-project
       Deploys from GitHub.
       Created at 2025.06.09 3:57 AM
       Last update at 2025.06.09 4:15 AM.
+
+---
+---
+# Első fejlesztés
+
+UI + funkciók
