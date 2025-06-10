@@ -59,6 +59,14 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 -    Automatikus színazonosítás pixelalapú kép elemzéssel.
 -    Felhasználói felület továbbfejlesztése.
 
+-    Mentés funkció (pl. kedvenc színek/képek localStorage-ben).
+-    Véletlenszerű szín gomb.
+-    Kép mentése vagy letöltése.
+-    Színpaletta generálása (pl. hasonló árnyalatok keresése).
+-    Animált háttér a kiválasztott szín alapján.
+
+-    A kulcsokat backendből kiszolgálni (proxy), ne frontendben szerepeljenek publikusan -- Biztonsági kockázat
+
 ---
 
 ## Képernyőkép
