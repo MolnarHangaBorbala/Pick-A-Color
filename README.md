@@ -18,6 +18,9 @@ Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kivá
 - **Loader animáció:** A keresés alatt egy forgó négyzet jelenik meg.
 - **Képek kiemelése animációval és hover-effekttel.**
 - **Reszponzív UI.**
+- ***Első fejlesztés után***
+- **Témaálasztás** A jobb felső sarokban lévő gombra kattintva a Világos/Sötét témák között lehet váltani. Az ablak bezárása után is megmarad a választott téma (localStorage).
+- 
 
 ---
 
@@ -45,7 +48,10 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 ## Műszaki részletek
 
 - **Színnév meghatározás:** [`ntc.js`](https://github.com/insomnious0x01/ntc-js/blob/master/ntc.js) (Name That Color)
-- **Stílus:** Tiszta CSS alapú megvalósítás, animált hover-hatásokkal és interaktív keresőgombbal.
+- **Stílus:** CSS és Bootstrap 4.6.2 alapú megvalósítás, animált hover-hatásokkal, interaktív keresőgombbal és témaválasztó gombbal.
+- **Logó:** A ball felső sarokban található logót a [`Logo`](https://logo.com/) oldalán készítettem el.
+- **Kereső ikon:** Flaticon: [`ICON`](https://www.flaticon.com/free-icon/search_3686896?term=search&page=1&position=16&origin=tag&related_id=3686896)
+- **Font:** [`Groovetastic`](https://www.dafont.com/groovetastic.font)
 
 ---
 
@@ -59,19 +65,24 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 -    Automatikus színazonosítás pixelalapú kép elemzéssel.
 -    Felhasználói felület továbbfejlesztése.
 
+
 -    Mentés funkció (pl. kedvenc színek/képek localStorage-ben).
 -    Véletlenszerű szín gomb.
 -    Kép mentése vagy letöltése.
 -    Színpaletta generálása (pl. hasonló árnyalatok keresése).
 -    Animált háttér a kiválasztott szín alapján.
 
+
 -    A kulcsokat backendből kiszolgálni (proxy), ne frontendben szerepeljenek publikusan -- Biztonsági kockázat
 
 ---
 
 ## Képernyőkép
-
+### Első megalósítás
 ![image](https://github.com/user-attachments/assets/a2ed5a95-0c51-4474-9649-6fe22c24d7e1)
+
+### Első fejlesztés után
+![image](https://github.com/user-attachments/assets/fb9bf8ed-234c-4520-a7f6-5eba2ce84f94)
 
 ---
 
@@ -88,3 +99,4 @@ Configuration for pick-a-color-project
 # Első fejlesztés
 
 UI + funkciók
+
