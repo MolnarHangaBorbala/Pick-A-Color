@@ -19,8 +19,7 @@ Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kivá
 - **Képek kiemelése animációval és hover-effekttel.**
 - **Reszponzív UI.**
 - ***Első fejlesztés után***
-- **Témaálasztás** A jobb felső sarokban lévő gombra kattintva a Világos/Sötét témák között lehet váltani. Az ablak bezárása után is megmarad a választott téma (localStorage).
-- 
+- **Témaválasztás** A jobb felső sarokban lévő gombra kattintva a Világos/Sötét témák között lehet váltani. Az ablak bezárása után is megmarad a választott téma (localStorage).
 
 ---
 
