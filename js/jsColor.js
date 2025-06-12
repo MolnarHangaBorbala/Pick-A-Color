@@ -123,25 +123,24 @@ const colorPicker = document.getElementById('colorPicker');
 const logoBorder = document.getElementById('logo');
 const searchButton = document.getElementById('searchBtnImg');
 const body = document.getElementById('body');
-const images = document.querySelectorAll('.image-wrapper img');
 
 function applyTheme(isDark) {
     if (isDark) {
+        toggle.classList.add('dark-theme');
         body.classList.add('dark-theme');
         navbar.classList.add('dark-theme');
         colorPicker.classList.add('dark-theme');
         logo.classList.add('dark-theme');
         logo.src = 'img/pick-a-color-logo-transparent-dark.png';
         searchButton.src = 'img/search-dark.png';
-        images.forEach(img => img.classList.add('dark-theme'));
     } else {
+        toggle.classList.remove('dark-theme');
         body.classList.remove('dark-theme');
         navbar.classList.remove('dark-theme');
         colorPicker.classList.remove('dark-theme');
         logo.classList.remove('dark-theme');
         logo.src = 'img/pick-a-color-logo-transparent-light.png';
         searchButton.src = 'img/search-light.png';
-        images.forEach(img => img.classList.remove('dark-theme'));
     }
 }
 
