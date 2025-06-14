@@ -122,5 +122,5 @@ Configuration for pick-a-color-project
 - 5 kép helyett 12
 - Telefonon normálisan néz ki és használhatóbb lett
 - Favicon beállítva
-- UI színek módosítása
+- UI színek módosítva
 - Nincs scrollbar
