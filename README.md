@@ -82,37 +82,24 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 
 ## Képernyőkép
 ### Első megvalósítás
-<p align="center">
-      ![image](https://github.com/user-attachments/assets/a2ed5a95-0c51-4474-9649-6fe22c24d7e1)
-</p>
+<img src="https://github.com/user-attachments/assets/a2ed5a95-0c51-4474-9649-6fe22c24d7e1" alt="image" width="550"/>
 
 ### Első fejlesztés után
-<p align="center">
-      ![image](https://github.com/user-attachments/assets/fb9bf8ed-234c-4520-a7f6-5eba2ce84f94)
-</p>
+<img src="https://github.com/user-attachments/assets/fb9bf8ed-234c-4520-a7f6-5eba2ce84f94" alt="image" width="550"/>
 
 ### Második fejlesztés után
 
 #### Sötét
-<p align="center">
-      ![image](https://github.com/user-attachments/assets/cba3f5e2-c652-4a2c-ac22-2e7a05d41087)
-</p>
+<img src="https://github.com/user-attachments/assets/cba3f5e2-c652-4a2c-ac22-2e7a05d41087" alt="image" width="550"/>
 
 #### Világos
-<p align="center">
-      ![V3-light](https://github.com/user-attachments/assets/6a630e4d-2884-4176-ad41-651a065c4d3a)
-</p>
+<img src="https://github.com/user-attachments/assets/6a630e4d-2884-4176-ad41-651a065c4d3a" alt="V3-light" width="550"/>
 
 #### Favicon 
-<p align="center">
-      ![V3-favicon](https://github.com/user-attachments/assets/bd067e60-e0a6-4b13-bb96-7b76df208d66)
-</p>
+<img src="https://github.com/user-attachments/assets/bd067e60-e0a6-4b13-bb96-7b76df208d66" alt="V3-favicon" width="550"/>
 
 #### Telefon
-<p align="center">
-      <img src="https://github.com/user-attachments/assets/29c9f0b5-632b-40d9-8ddb-0bfded13de24" alt="V3-dark-phone" width="250"/>
-</p>
-
+<img src="https://github.com/user-attachments/assets/29c9f0b5-632b-40d9-8ddb-0bfded13de24" alt="V3-dark-phone" width="250"/>
 
 ---
 
