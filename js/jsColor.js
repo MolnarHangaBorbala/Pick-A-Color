@@ -7,7 +7,7 @@ const pexelsApiKey = 'Rnu17TxBMWWMOQxnotJt5mZ8BBrkDkRWAuU3bPtbZGukZ5pO3XVErwEA';
  * Ha túllépjük a limitet (403-as hiba), akkor hibát dobunk.
  */
 async function fetchUnsplashImages(query) {
-    const url = `https://api.unsplash.com/photos/random?count=5&query=${encodeURIComponent(query)}&client_id=${unsplashKey}`;
+    const url = `https://api.unsplash.com/photos/random?count=12&query=${encodeURIComponent(query)}&client_id=${unsplashKey}`;
     const response = await fetch(url);
     if (response.status === 403) throw new Error('unsplash_limit');
     const photos = await response.json();
@@ -19,7 +19,7 @@ async function fetchUnsplashImages(query) {
  * Az Authorization fejlécben küldjük az API kulcsot.
  */
 async function fetchPexelsImages(query) {
-    const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=5`;
+    const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=12`;
     const response = await fetch(url, {
         headers: {
             Authorization: pexelsApiKey
