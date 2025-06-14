@@ -21,7 +21,7 @@ Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kivá
 - ***Első fejlesztés után***
 - **Témaválasztás** A jobb felső sarokban lévő gombra kattintva a Világos/Sötét témák között lehet váltani. Az ablak bezárása után is megmarad a választott téma (localStorage).
 - ***Második fejlesztés után***
-- **Telefon** Telefonon a navbar megjelenése és kinézete optimalizálva.
+- **Telefonon** a navbar megjelenése és kinézete optimalizálva.
 
 ---
 
@@ -81,25 +81,38 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 ---
 
 ## Képernyőkép
-### Első megalósítás
-![image](https://github.com/user-attachments/assets/a2ed5a95-0c51-4474-9649-6fe22c24d7e1)
+### Első megvalósítás
+<p align="center">
+      ![image](https://github.com/user-attachments/assets/a2ed5a95-0c51-4474-9649-6fe22c24d7e1)
+</p>
 
 ### Első fejlesztés után
-![image](https://github.com/user-attachments/assets/fb9bf8ed-234c-4520-a7f6-5eba2ce84f94)
+<p align="center">
+      ![image](https://github.com/user-attachments/assets/fb9bf8ed-234c-4520-a7f6-5eba2ce84f94)
+</p>
 
 ### Második fejlesztés után
 
 #### Sötét
-![image](https://github.com/user-attachments/assets/cba3f5e2-c652-4a2c-ac22-2e7a05d41087)
+<p align="center">
+      ![image](https://github.com/user-attachments/assets/cba3f5e2-c652-4a2c-ac22-2e7a05d41087)
+</p>
 
 #### Világos
-![V3-light](https://github.com/user-attachments/assets/6a630e4d-2884-4176-ad41-651a065c4d3a)
+<p align="center">
+      ![V3-light](https://github.com/user-attachments/assets/6a630e4d-2884-4176-ad41-651a065c4d3a)
+</p>
 
 #### Favicon 
-![V3-favicon](https://github.com/user-attachments/assets/bd067e60-e0a6-4b13-bb96-7b76df208d66)
+<p align="center">
+      ![V3-favicon](https://github.com/user-attachments/assets/bd067e60-e0a6-4b13-bb96-7b76df208d66)
+</p>
 
 #### Telefon
-![V3-dark-phone](https://github.com/user-attachments/assets/29c9f0b5-632b-40d9-8ddb-0bfded13de24)
+<p align="center">
+      <img src="https://github.com/user-attachments/assets/29c9f0b5-632b-40d9-8ddb-0bfded13de24" alt="V3-dark-phone" width="250"/>
+</p>
+
 
 ---
 
