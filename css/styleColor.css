@@ -296,15 +296,6 @@ html {
     border-color: #212529;
 }
 
-/* Téma változtatása - logo border */
-#logo {
-    border-right: 1px solid rgb(82, 82, 82);
-}
-
-#logo.dark-theme {
-    border-right: 1px solid rgb(43, 43, 43);
-}
-
 /* Button */
 #searchBtn {
     background-color: transparent;
