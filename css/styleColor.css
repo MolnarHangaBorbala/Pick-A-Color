@@ -18,6 +18,16 @@ html {
     src: url(../font/Groovetastic\ Free.otf);
 }
 
+#searchId {
+    margin-top: -70px;
+}
+
+@media (max-width: 580px) {
+    #searchId {
+        margin-top: 0;
+    }
+}
+
 /* colorLabel */
 #colorLabel {
     font-size: 33px;
