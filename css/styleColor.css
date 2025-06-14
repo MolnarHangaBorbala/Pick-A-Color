@@ -3,6 +3,19 @@ html {
     -ms-overflow-style: none;
 }
 
+.topnav-centered {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+    margin-right: 10;
+    margin-left: auto;
+}
+
 @font-face {
     font-family: 'CustomFont0';
     src: url(../font/MyWorking.otf);
@@ -347,7 +360,7 @@ html {
     object-fit: cover;
     border-radius: 25px;
     border: 2px solid #585d83;
-        box-shadow:
+    box-shadow:
         rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px,
         rgba(0, 0, 0, 0.12) 0px 4px 6px,
