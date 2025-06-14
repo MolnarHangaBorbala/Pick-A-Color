@@ -123,4 +123,4 @@ Configuration for pick-a-color-project
 - Telefonon normálisan néz ki és használhatóbb lett
 - Favicon beállítva
 - UI színek módosítása
-
+- Nincs scrollbar
