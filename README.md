@@ -20,6 +20,8 @@ Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kivá
 - **Reszponzív UI.**
 - ***Első fejlesztés után***
 - **Témaválasztás** A jobb felső sarokban lévő gombra kattintva a Világos/Sötét témák között lehet váltani. Az ablak bezárása után is megmarad a választott téma (localStorage).
+- ***Második fejlesztés után***
+- **Telefon** Telefonon a navbar megjelenése és kinézete optimalizálva.
 
 ---
 
@@ -51,6 +53,7 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 - **Logó:** A ball felső sarokban található logót a [`Logo`](https://logo.com/) oldalán készítettem el.
 - **Kereső ikon:** Flaticon: [`ICON`](https://www.flaticon.com/free-icon/search_3686896?term=search&page=1&position=16&origin=tag&related_id=3686896)
 - **Font:** [`Groovetastic`](https://www.dafont.com/groovetastic.font)
+- **Favicon:** [`Faicon.io`](https://favicon.io/emoji-favicons/artist-palette/) Emoji Favicons > artist palette
 
 ---
 
@@ -70,6 +73,7 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 -    Kép mentése vagy letöltése.
 -    Színpaletta generálása (pl. hasonló árnyalatok keresése).
 -    Animált háttér a kiválasztott szín alapján.
+-    Telefonos felület további szépítése
 
 
 -    A kulcsokat backendből kiszolgálni (proxy), ne frontendben szerepeljenek publikusan -- Biztonsági kockázat
@@ -83,6 +87,20 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 ### Első fejlesztés után
 ![image](https://github.com/user-attachments/assets/fb9bf8ed-234c-4520-a7f6-5eba2ce84f94)
 
+### Második fejlesztés után
+
+#### Sötét
+![image](https://github.com/user-attachments/assets/cba3f5e2-c652-4a2c-ac22-2e7a05d41087)
+
+#### Világos
+![V3-light](https://github.com/user-attachments/assets/6a630e4d-2884-4176-ad41-651a065c4d3a)
+
+#### Favicon 
+![V3-favicon](https://github.com/user-attachments/assets/bd067e60-e0a6-4b13-bb96-7b76df208d66)
+
+#### Telefon
+![V3-dark-phone](https://github.com/user-attachments/assets/29c9f0b5-632b-40d9-8ddb-0bfded13de24)
+
 ---
 
 
@@ -91,11 +109,18 @@ Configuration for pick-a-color-project
       pick-a-color-project.netlify.app
       Deploys from GitHub.
       Created at 2025.06.09 3:57 AM
-      Last update at 2025.06.10 2:58 AM
+      Last update at 2025.06.14 2:28 PM
 
 ---
 ---
 # Első fejlesztés
 
-UI + funkciók
+- UI + funkciók
+
+# Második fejlesztés
+
+- 5 kép helyett 12
+- Telefonon normálisan néz ki és használhatóbb lett
+- Favicon beállítva
+- UI színek módosítása
 
