@@ -3,19 +3,6 @@ html {
     -ms-overflow-style: none;
 }
 
-.topnav-centered {
-    float: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.topnav-right {
-    margin-right: 10;
-    margin-left: auto;
-}
-
 @font-face {
     font-family: 'CustomFont0';
     src: url(../font/MyWorking.otf);
@@ -33,15 +20,17 @@ html {
 
 /* colorLabel */
 #colorLabel {
-    font-size: 30px;
+    font-size: 33px;
     cursor: default;
-    margin-top: 5px;
     font-family: 'CustomFont2';
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 #colorPicker {
-    height: 60px;
-    width: 90px;
+    min-height: 60px;
+    min-width: 90px;
     margin-right: 5px;
     margin-left: 10px;
 }
@@ -307,21 +296,12 @@ html {
 }
 
 /* Button */
-/* Téma változtatása - search button */
 #searchBtn {
     background-color: transparent;
     border-color: transparent;
     height: 50px;
     width: 50px;
-    margin-top: 5px;
-}
-
-#searchBtn.dark-theme {
-    background-color: transparent;
-    border-color: transparent;
-    height: 50px;
-    width: 50px;
-    margin-top: 5px;
+    padding-bottom: 10px;
 }
 
 /* Images */
