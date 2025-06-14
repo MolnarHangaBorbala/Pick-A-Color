@@ -1,3 +1,8 @@
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
 @font-face {
     font-family: 'CustomFont0';
     src: url(../font/MyWorking.otf);
@@ -243,14 +248,14 @@
 /* Téma változtatása */
 #body {
     text-align: center;
-    background-color: #b1b6d8;
+    background-color: #96a2ee;
     color: black;
     transition: background-color 0.3s, color 0.3s;
 }
 
 #body.dark-theme {
     text-align: center;
-    background-color: #1a1d31;
+    background-color: #363d68;
     color: rgb(214, 214, 214);
     transition: background-color 0.3s, color 0.3s;
 }
