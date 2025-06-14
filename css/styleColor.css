@@ -301,6 +301,8 @@ html {
     border-color: transparent;
     height: 50px;
     width: 50px;
+    min-height: 20px;
+    min-width: 20px;
     padding-bottom: 10px;
 }
 
