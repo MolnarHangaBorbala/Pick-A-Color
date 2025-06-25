@@ -27,7 +27,7 @@ Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kivá
 
 ## Használat
 
-1. Nyisd meg a `Color.html` fájlt vagy a [`Netlify`](https://pick-a-color-project.netlify.app) oldalt egy modern böngészőben.
+1. Nyisd meg az `index.html` fájlt vagy a [`Netlify`](https://pick-a-color-project.netlify.app) oldalt egy modern böngészőben.
 2. Válassz egy színt a színválasztóból.
 3. A kiválasztott szín neve megjelenik automatikusan.
 4. Kattints a "🔍" gombra a kereséshez.
