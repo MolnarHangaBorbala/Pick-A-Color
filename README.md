@@ -18,20 +18,45 @@ Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kivá
 - **Loader animáció:** A keresés alatt egy forgó négyzet jelenik meg.
 - **Képek kiemelése animációval és hover-effekttel.**
 - **Reszponzív UI.**
-- ***Első fejlesztés után***
 - **Témaválasztás** A jobb felső sarokban lévő gombra kattintva a Világos/Sötét témák között lehet váltani. Az ablak bezárása után is megmarad a választott téma (localStorage).
-- ***Második fejlesztés után***
 - **Telefonon** a navbar megjelenése és kinézete optimalizálva.
+- **Menü gomb** elhelyezése
+
+<details>
+<summary><strong>Pipetta eszköz támogatás</strong> – <a href="https://developer.chrome.com/docs/capabilities/web-apis/eyedropper" target="_blank">EyeDropper API</a></summary>
+
+| Böngésző | Verzió | Támogatás |
+|----------|--------|-----------|
+| ![Chrome](https://img.shields.io/badge/Chrome-95%2B-brightgreen?logo=google-chrome&logoColor=white) | 95+ | ✅ |
+| ![Edge](https://img.shields.io/badge/Edge-95%2B-brightgreen?logo=microsoft-edge&logoColor=white) | 95+ | ✅ |
+| ![Firefox](https://img.shields.io/badge/Firefox-Nem%20támogatott-red?logo=firefox-browser&logoColor=white) | – | ❌ |
+| ![Safari](https://img.shields.io/badge/Safari-Nem%20támogatott-red?logo=safari&logoColor=white) | – | ❌ |
+
+</details>
+
 
 ---
 
 ## Használat
-
+<details>
+      
 1. Nyisd meg az `index.html` fájlt vagy a [`Netlify`](https://pick-a-color-project.netlify.app) oldalt egy modern böngészőben.
 2. Válassz egy színt a színválasztóból.
 3. A kiválasztott szín neve megjelenik automatikusan.
 4. Kattints a "🔍" gombra a kereséshez.
 5. A loader megjelenik, majd kis késleltetéssel betöltődnek a színhez illeszkedő képek.
+</details>
+      
+### + Pipetta használata
+<details>
+      
+1. Nyisd meg a menüt a képernyő jobb felső sarkában.
+2. Kattints a 💉 ikonra.
+3. Válassz egy pixelt a képernyőn.
+4. Nyisd meg újra a menüt.
+5. Kattints a pipetta melletti színes mezőre a színkód (HEX / RGB / HSL) másolásához.
+6. Kattints a színkódra a formátumok közötti váltáshoz.
+</details>
 
 ---
 
@@ -51,9 +76,11 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 - **Színnév meghatározás:** [`ntc.js`](https://github.com/insomnious0x01/ntc-js/blob/master/ntc.js) (Name That Color)
 - **Stílus:** CSS és Bootstrap 4.6.2 alapú megvalósítás, animált hover-hatásokkal, interaktív keresőgombbal és témaválasztó gombbal.
 - **Logó:** A ball felső sarokban található logót a [`Logo`](https://logo.com/) oldalán készítettem el.
-- **Kereső ikon:** Flaticon: [`ICON`](https://www.flaticon.com/free-icon/search_3686896?term=search&page=1&position=16&origin=tag&related_id=3686896)
+- **Kereső ikon:** Flaticon: [`ICON`](https://www.flaticon.com/free-icon/search_3686896?term=search&page=1&position=16&origin=tag&related_id=3686896) Világos: #ecca2f  Sötét: #9ba7f3
 - **Font:** [`Groovetastic`](https://www.dafont.com/groovetastic.font)
-- **Favicon:** [`Faicon.io`](https://favicon.io/emoji-favicons/artist-palette/) Emoji Favicons > artist palette
+- **Favicon:** [`Favicon.io`](https://favicon.io/emoji-favicons/artist-palette/) Emoji Favicons > artist palette
+- **Menü ikon:** [`Flaticon`](https://www.flaticon.com/free-icon/menu_660376?term=menu&page=1&position=48&origin=tag&related_id=660376) Világos: #ecca2f  Sötét: #9ba7f3
+- **Pipetta ikon:** [`Flaticon`](https://www.flaticon.com/free-icon/dropper_9210683?term=pipette&page=3&position=84&origin=tag&related_id=9210683) + Szinezés
 
 ---
 
@@ -63,7 +90,7 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 -    Pontosabb színillesztés CIELAB (LAB) színtér és ΔE 1976 távolságmérés alapján (jelenleg nem aktív).
 -    Automatikus kép szűrés a kiválasztott szín LAB színtérbeli távolsága (ΔE) alapján.
 -    Teljesítmény- és sebességoptimalizálás (például képek méretének csökkentése elemzés előtt).
--    Drag-and-drop képkeresés vagy pipetta eszköz integrálása.
+-    Drag-and-drop képkeresés ~~vagy pipetta eszköz integrálása.~~
 -    Automatikus színazonosítás pixelalapú kép elemzéssel.
 -    Felhasználói felület továbbfejlesztése.
 
@@ -80,15 +107,24 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 
 ---
 
-## Képernyőkép
+## Képernyőképek
+
 ### Első megvalósítás
+<details>
+      
 <img src="https://github.com/user-attachments/assets/a2ed5a95-0c51-4474-9649-6fe22c24d7e1" alt="image" width="550"/>
+</details> 
 
 ### Első fejlesztés után
+<details> 
+      
 <img src="https://github.com/user-attachments/assets/fb9bf8ed-234c-4520-a7f6-5eba2ce84f94" alt="image" width="550"/>
+</details> 
 
 ### Második fejlesztés után
 
+<details> 
+      
 #### Sötét
 <img src="https://github.com/user-attachments/assets/cba3f5e2-c652-4a2c-ac22-2e7a05d41087" alt="image" width="550"/>
 
@@ -100,6 +136,15 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 
 #### Telefon
 <img src="https://github.com/user-attachments/assets/29c9f0b5-632b-40d9-8ddb-0bfded13de24" alt="V3-dark-phone" width="250"/>
+</details> 
+
+### Harmadik fejlesztés után
+
+<details> 
+      
+#### Sötét
+<img src="https://github.com/user-attachments/assets/dc0ddbff-c783-48d3-9310-571df055977c" alt="V4-dark" width="550"/>
+</details> 
 
 ---
 
@@ -116,6 +161,7 @@ Configuration for pick-a-color-project
 # Első fejlesztés
 
 - UI + funkciók
+- Témaválasztás
 
 # Második fejlesztés
 
@@ -124,3 +170,12 @@ Configuration for pick-a-color-project
 - Favicon beállítva
 - UI színek módosítva
 - Nincs scrollbar
+
+# Harmaik fejlesztés
+
+- 12 kép helyett 18
+- Menü icon
+- Pipetta eszköz
+- pipettával kiválasztott szín másolása
+- Pipettával kiválasztott szín HEX, RGB, HSL kód megjelenítése
+
