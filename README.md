@@ -18,12 +18,12 @@ Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kivá
 - **Loader animáció:** A keresés alatt egy forgó négyzet jelenik meg.
 - **Képek kiemelése animációval és hover-effekttel.**
 - **Reszponzív UI.**
-- **Témaválasztás** A jobb felső sarokban lévő gombra kattintva a Világos/Sötét témák között lehet váltani. Az ablak bezárása után is megmarad a választott téma (localStorage).
+- **Témaválasztás** A jobb felső sarokban lévő gombra kattintva a (Sötét/Világos) témák között lehet váltani. Az ablak bezárása után is megmarad a választott téma (localStorage).
 - **Telefonon** a navbar megjelenése és kinézete optimalizálva.
 - **Menü gomb** elhelyezése
 
 <details>
-<summary><strong>Pipetta eszköz támogatás</strong> – <a href="https://developer.chrome.com/docs/capabilities/web-apis/eyedropper" target="_blank">EyeDropper API</a></summary>
+<summary><strong>Pipetta eszköz támogatás</strong> (<a href="https://developer.chrome.com/docs/capabilities/web-apis/eyedropper">EyeDropper API</a>)</summary>
 
 | Böngésző | Verzió | Támogatás |
 |----------|--------|-----------|
@@ -73,7 +73,7 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
       
 - **Színnév meghatározás:** [`ntc.js`](https://github.com/insomnious0x01/ntc-js/blob/master/ntc.js) (Name That Color)
 - **Stílus:** CSS és Bootstrap 4.6.2 alapú megvalósítás, animált hover-hatásokkal, interaktív keresőgombbal és témaválasztó gombbal.
-- **Logó:** A ball felső sarokban található logót a [`Logo`](https://logo.com/) oldalán készítettem el.
+- **Logó:** A bal felső sarokban található logót a [`Logo`](https://logo.com/) oldalán készítettem el.
 - **Kereső ikon:** Flaticon: [`ICON`](https://www.flaticon.com/free-icon/search_3686896?term=search&page=1&position=16&origin=tag&related_id=3686896) Világos: #ecca2f  Sötét: #9ba7f3
 - **Font:** [`Groovetastic`](https://www.dafont.com/groovetastic.font)
 - **Favicon:** [`Favicon.io`](https://favicon.io/emoji-favicons/artist-palette/) Emoji Favicons > artist palette
@@ -96,7 +96,7 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 
 -    Mentés funkció (pl. kedvenc színek/képek localStorage-ben).
 -    Véletlenszerű szín gomb.
--    Kép mentése vagy letöltése.
+-    Kép letöltése.
 -    Színpaletta generálása (pl. hasonló árnyalatok keresése).
 -    Animált háttér a kiválasztott szín alapján.
 -    Telefonos felület további szépítése
@@ -106,7 +106,7 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 
 ---
 
-## Képernyőképek
+## Képernyőképek (verziók fejlődése)
 
 <details>
 <summary><strong>Első megvalósítás</strong></summary>
@@ -154,7 +154,7 @@ Configuration for pick-a-color-project
       Last update at 2025.07.11 2:56 PM
 
 ---
----
+
 # Első fejlesztés
 
 - UI + funkciók
@@ -168,7 +168,7 @@ Configuration for pick-a-color-project
 - UI színek módosítva
 - Nincs scrollbar
 
-# Harmaik fejlesztés
+# Harmadik fejlesztés
 
 - 12 kép helyett 18
 - Menü icon
