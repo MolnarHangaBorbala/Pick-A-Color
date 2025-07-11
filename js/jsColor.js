@@ -192,7 +192,7 @@ let currentFormat = 'hex'; // hex, rgb, hsl
 
 pickColorBtn.addEventListener('click', async () => {
     if (!window.EyeDropper) {
-        alert('Ez a böngésző nem támogatja a pipetta eszközt.');
+        alert("This browser doesn't support EyeDropper API. Try google chrome.");
         return;
     }
 
@@ -204,7 +204,7 @@ pickColorBtn.addEventListener('click', async () => {
         updateColorDisplay();
         colorPreview.style.backgroundColor = currentHex;
     } catch (err) {
-        console.error('Hiba:', err);
+        console.error('Error:', err);
     }
 });
 
@@ -236,7 +236,7 @@ colorPreview.addEventListener('click', async () => {
             updateColorDisplay();
         }, 1000);
     } catch (err) {
-        alert('Nem sikerült másolni a vágólapra.');
+        alert('failed to copy.');
     }
 });
 
@@ -306,9 +306,9 @@ colorPreview.addEventListener('click', async () => {
 
     try {
         await navigator.clipboard.writeText(textToCopy);
-        showToast('✔️ Másolva a vágólapra!');
+        showToast('✔️ Copied to clipboard!');
     } catch (err) {
-        showToast('❌ Nem sikerült másolni!');
+        showToast('❌ Failed to copy! :(');
     }
 });
 
