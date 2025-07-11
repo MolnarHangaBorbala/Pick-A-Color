@@ -482,6 +482,7 @@ html {
     float: left;
     border-radius: 50%;
     cursor: copy;
+    background-color: #ffffff;
 }
 
 #colorCode {
