@@ -7,7 +7,7 @@ const pexelsApiKey = 'Rnu17TxBMWWMOQxnotJt5mZ8BBrkDkRWAuU3bPtbZGukZ5pO3XVErwEA';
  * Ha túllépjük a limitet (403-as hiba), akkor hibát dobunk.
  */
 async function fetchUnsplashImages(query) {
-    const url = `https://api.unsplash.com/photos/random?count=12&query=${encodeURIComponent(query)}&client_id=${unsplashKey}`;
+    const url = `https://api.unsplash.com/photos/random?count=18&query=${encodeURIComponent(query)}&client_id=${unsplashKey}`;
     const response = await fetch(url);
     if (response.status === 403) throw new Error('unsplash_limit');
     const photos = await response.json();
@@ -19,7 +19,7 @@ async function fetchUnsplashImages(query) {
  * Az Authorization fejlécben küldjük az API kulcsot.
  */
 async function fetchPexelsImages(query) {
-    const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=12`;
+    const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=18`;
     const response = await fetch(url, {
         headers: {
             Authorization: pexelsApiKey
@@ -104,24 +104,22 @@ document.getElementById('colorPicker').addEventListener('input', () => {
     document.getElementById('colorLabel').innerText = `Color: ${colorName}`;
 });
 
-/**
- * Amikor az oldal betöltődik, az aktuális színhez tartozó nevet kiírjuk.
- */
+// Amikor az oldal betöltődik, az aktuális színhez tartozó nevet kiírjuk.
 window.addEventListener('DOMContentLoaded', () => {
     const hex = document.getElementById('colorPicker').value;
     const colorName = ntc.name(hex)[1];
     document.getElementById('colorLabel').innerText = `Color: ${colorName}`;
 });
 
-/**
- * Dark és Light téma váltása. 
- */
+// Dark és Light téma váltása.
 const toggle = document.getElementById('theme-switch__checkbox');
 const logo = document.getElementById('logo');
 const navbar = document.querySelector('.navbar');
 const colorPicker = document.getElementById('colorPicker');
 const searchButton = document.getElementById('searchBtnImg');
 const body = document.getElementById('body');
+const menu = document.getElementById('dropbtnimgid');
+const dropperButton = document.getElementById('dropperBtnImg');
 
 function applyTheme(isDark) {
     if (isDark) {
@@ -131,6 +129,8 @@ function applyTheme(isDark) {
         colorPicker.classList.add('dark-theme');
         logo.src = 'img/pick-a-color-logo-transparent-dark.png';
         searchButton.src = 'img/search-dark.png';
+        menu.src = 'img/menu-dark.png';
+        dropperButton.src = 'img/dropper-dark.png';
     } else {
         toggle.classList.remove('dark-theme');
         body.classList.remove('dark-theme');
@@ -138,9 +138,10 @@ function applyTheme(isDark) {
         colorPicker.classList.remove('dark-theme');
         logo.src = 'img/pick-a-color-logo-transparent-light.png';
         searchButton.src = 'img/search-light.png';
+        menu.src = 'img/menu-light.png';
+        dropperButton.src = 'img/dropper-light.png';
     }
 }
-
 
 // Betöltéskor ellenőrizzük a mentett beállítást
 document.addEventListener('DOMContentLoaded', () => {
@@ -157,3 +158,167 @@ toggle.addEventListener('change', () => {
     localStorage.setItem('dark-theme', isDark);
     applyTheme(isDark);
 });
+
+//Menu gomb funkció
+function menuButton() {
+    document.getElementById("Dropdown").classList.toggle("show");
+}
+
+// Bezárja a legördülő menüt, ha a felhasználó azon kívülre kattint
+window.onclick = function (event) {
+    const isDropbtn = event.target.matches('.dropbtn');
+    const isInsideDropdown = event.target.closest('.dropdown-content');
+    const isButtonInsideDropdown = isInsideDropdown && event.target.tagName.toLowerCase() === 'img';
+
+    if (!isDropbtn && (!isInsideDropdown || isButtonInsideDropdown)) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+};
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+// Pipetta funkció
+const pickColorBtn = document.getElementById('pickColorBtn');
+const colorPreview = document.getElementById('colorPreview');
+const colorCode = document.getElementById('colorCode');
+
+let currentHex = '#ffffff';
+let currentFormat = 'hex'; // hex, rgb, hsl
+
+pickColorBtn.addEventListener('click', async () => {
+    if (!window.EyeDropper) {
+        alert('Ez a böngésző nem támogatja a pipetta eszközt.');
+        return;
+    }
+
+    try {
+        const eyeDropper = new EyeDropper();
+        const result = await eyeDropper.open();
+        currentHex = result.sRGBHex;
+        currentFormat = 'hex';
+        updateColorDisplay();
+        colorPreview.style.backgroundColor = currentHex;
+    } catch (err) {
+        console.error('Hiba:', err);
+    }
+});
+
+colorCode.addEventListener('click', () => {
+    if (currentFormat === 'hex') currentFormat = 'rgb';
+    else if (currentFormat === 'rgb') currentFormat = 'hsl';
+    else currentFormat = 'hex';
+
+    updateColorDisplay();
+});
+
+colorPreview.addEventListener('click', async () => {
+    let textToCopy = '';
+
+    if (currentFormat === 'hex') textToCopy = currentHex;
+    else if (currentFormat === 'rgb') {
+        const rgb = hexToRgb(currentHex);
+        textToCopy = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+    } else if (currentFormat === 'hsl') {
+        const rgb = hexToRgb(currentHex);
+        const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+        textToCopy = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+    }
+
+    try {
+        await navigator.clipboard.writeText(textToCopy);
+        const originalText = colorCode.textContent;
+        setTimeout(() => {
+            updateColorDisplay();
+        }, 1000);
+    } catch (err) {
+        alert('Nem sikerült másolni a vágólapra.');
+    }
+});
+
+function updateColorDisplay() {
+    if (currentFormat === 'hex') {
+        colorCode.textContent = currentHex;
+    } else if (currentFormat === 'rgb') {
+        const rgb = hexToRgb(currentHex);
+        colorCode.textContent = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+    } else if (currentFormat === 'hsl') {
+        const rgb = hexToRgb(currentHex);
+        const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+        colorCode.textContent = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+    }
+}
+
+function hexToRgb(hex) {
+    hex = hex.replace('#', '');
+    const bigint = parseInt(hex, 16);
+    return {
+        r: (bigint >> 16) & 255,
+        g: (bigint >> 8) & 255,
+        b: bigint & 255,
+    };
+}
+
+function rgbToHsl(r, g, b) {
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+
+    if (max === min) {
+        h = s = 0;
+    } else {
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+            case r: h = ((g - b) / d + (g < b ? 6 : 0)); break;
+            case g: h = ((b - r) / d + 2); break;
+            case b: h = ((r - g) / d + 4); break;
+        }
+        h *= 60;
+    }
+
+    return {
+        h: Math.round(h),
+        s: Math.round(s * 100),
+        l: Math.round(l * 100),
+    };
+}
+
+// "Másolva" alert
+colorPreview.addEventListener('click', async () => {
+    let textToCopy = '';
+
+    if (currentFormat === 'hex') textToCopy = currentHex;
+    else if (currentFormat === 'rgb') {
+        const rgb = hexToRgb(currentHex);
+        textToCopy = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+    } else if (currentFormat === 'hsl') {
+        const rgb = hexToRgb(currentHex);
+        const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+        textToCopy = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+    }
+
+    try {
+        await navigator.clipboard.writeText(textToCopy);
+        showToast('✔️ Másolva a vágólapra!');
+    } catch (err) {
+        showToast('❌ Nem sikerült másolni!');
+    }
+});
+
+// Toast üzenet megjelenítése
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
