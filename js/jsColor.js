@@ -1,13 +1,14 @@
-// API kulcsok Unsplash és Pexels szolgáltatáshoz
+// API kulcsok Unsplash, Pexels és Pixabay szolgáltatáshoz
 const unsplashKey = 'VNXIU--bktHOdc10dk-7GxCSI9w7P12b3G2RQPVq0J0';
 const pexelsApiKey = 'Rnu17TxBMWWMOQxnotJt5mZ8BBrkDkRWAuU3bPtbZGukZ5pO3XVErwEA';
+const pixabayApiKey = '51351003-e32b215c2a99c33f999135cc2';
 
 /**
  * Unsplash API-ról képek lekérése adott kulcsszó alapján.
  * Ha túllépjük a limitet (403-as hiba), akkor hibát dobunk.
  */
 async function fetchUnsplashImages(query) {
-    const url = `https://api.unsplash.com/photos/random?count=18&query=${encodeURIComponent(query)}&client_id=${unsplashKey}`;
+    const url = `https://api.unsplash.com/photos/random?count=30&query=${encodeURIComponent(query)}&client_id=${unsplashKey}`;
     const response = await fetch(url);
     if (response.status === 403) throw new Error('unsplash_limit');
     const photos = await response.json();
@@ -19,7 +20,7 @@ async function fetchUnsplashImages(query) {
  * Az Authorization fejlécben küldjük az API kulcsot.
  */
 async function fetchPexelsImages(query) {
-    const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=18`;
+    const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=30`;
     const response = await fetch(url, {
         headers: {
             Authorization: pexelsApiKey
@@ -31,8 +32,20 @@ async function fetchPexelsImages(query) {
 }
 
 /**
+ * Pixabay API-ról képek lekérése adott kulcsszó alapján.
+ */
+async function fetchPixabayImages(query, color) {
+    const url = `https://pixabay.com/api/?key=${pixabayKey}&q=${encodeURIComponent(query)}&colors=${color}&image_type=photo&per_page=30`;
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('pixabay_error');
+    const data = await response.json();
+    return data.hits.map(hit => hit.webformatURL);
+}
+
+/**
  * Először megpróbáljuk az Unsplash-t használni.
  * Ha az túllépte a limitet, átváltunk a Pexels-re.
+ * Ha a Pexels is túllépte a limitet, akkor végül a Pixabay-t használjuk.
  */
 async function fetchImages(query) {
     try {
@@ -40,7 +53,16 @@ async function fetchImages(query) {
     } catch (err) {
         if (err.message === 'unsplash_limit') {
             console.warn('Unsplash limit reached, switching to Pexels...');
-            return await fetchPexelsImages(query);
+            try {
+                return await fetchPexelsImages(query);
+            } catch (pexErr) {
+                if (pexErr.message === 'pexels_limit') {
+                    console.warn('Pexels limit reached, switching to Pixabay...');
+                    return await fetchPixabayImages(query);
+                } else {
+                    throw pexErr;
+                }
+            }
         } else {
             throw err;
         }
@@ -87,7 +109,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
         setTimeout(() => {
             renderImages(imageUrls);
             spinner.style.display = 'none'; // Animáció elrejtése
-        }, 900); // Késleltetés a megjelenítés előtt
+        }, 700); // Késleltetés a megjelenítés előtt
     } catch (error) {
         console.error('Error:', error);
         spinner.style.display = 'none'; // Hibakezelés esetén is elrejtjük az animációt
@@ -192,7 +214,7 @@ let currentFormat = 'hex'; // hex, rgb, hsl
 
 pickColorBtn.addEventListener('click', async () => {
     if (!window.EyeDropper) {
-        alert("This browser doesn't support EyeDropper API. Try google chrome.");
+        alert("This browser doesn't support EyeDropper API.");
         return;
     }
 
