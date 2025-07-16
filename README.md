@@ -2,7 +2,7 @@
 
 [![Live on Netlify](https://img.shields.io/badge/Live_on-Netlify-brightgreen?style=for-the-badge&logo=netlify&logoColor=white)](https://pick-a-color-project.netlify.app)
 
-Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kiválassz egy tetszőleges színt, majd az alapján automatikusan képeket keressen az Unsplash vagy Pexels oldalról. A cél, hogy a megjelenített képek színvilága harmonizáljon a kiválasztott árnyalattal.
+Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kiválassz egy tetszőleges színt, majd az alapján automatikusan képeket keressen az Unsplash, Pexels vagy Pixabay oldalról. A cél, hogy a megjelenített képek színvilága harmonizáljon a kiválasztott árnyalattal.
 
 **Élő demó:**  
 [https://pick-a-color-project.netlify.app](https://pick-a-color-project.netlify.app)
@@ -14,7 +14,7 @@ Egy egyszerű, de látványos webalkalmazás, amely lehetővé teszi, hogy kivá
 - **Színválasztó (color input):** A felhasználó kiválaszthat egy színt HTML5 színpalettából.
 - **Valós idejű színnév megjelenítés:** A kiválasztott színhez tartozó elnevezés azonnal frissül (ntc.js használatával).
 - **Képkeresés az Unsplash API-n keresztül**, színnév alapú kulcsszavakkal.
-- **API fallback:** Ha az Unsplash napi limitje elérte a maximumot, automatikusan átvált a Pexels API-ra.
+- **API fallback:** Ha az Unsplash napi limitje elérte a maximumot, automatikusan átvált a Pexels API-ra, majd ha az is elérte a maximumot akkor a Pixabay API-ra.
 - **Loader animáció:** A keresés alatt egy forgó négyzet jelenik meg.
 - **Képek kiemelése animációval és hover-effekttel.**
 - **Reszponzív UI.**
@@ -62,6 +62,7 @@ Az alkalmazás működéséhez két API kulcsra van szükséged:
 
 - [Unsplash API](https://unsplash.com/developers)
 - [Pexels API](https://www.pexels.com/api/)
+- [Pixabay API](https://pixabay.com/api/docs/)
 
 Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexelsApiKey` változókba.
 
@@ -172,6 +173,7 @@ Configuration for pick-a-color-project
 
 - 12 kép helyett 18
 - Menü icon
+- Pixabay API integrálása
 - Pipetta eszköz
 - pipettával kiválasztott szín másolása
 - Pipettával kiválasztott szín HEX, RGB, HSL kód megjelenítése
