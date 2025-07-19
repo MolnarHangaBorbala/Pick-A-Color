@@ -85,6 +85,33 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 <details>
       <summary>Fájl struktúra</summary>
 
+```bash
+.
+└── Pick-A-Color/
+    ├── index.html
+    ├── README.md
+    ├── js/
+    │   ├── jsColor.js
+    │   └── ntc.js
+    ├── css/
+    │   └── styleColor.css
+    ├── font/
+    │   ├── Groovetastic Free.otf
+    │   ├── MyWorking.otf
+    │   └── rocketcommand.ttf
+    └── img/
+        ├── dropper-dark.png
+        ├── dropper-light.png
+        ├── favicon-32x32.png
+        ├── menu-dark.png
+        ├── menu-light.png
+        ├── pick-a-color-logo-dark.png
+        ├── pick-a-color-logo-light.png
+        ├── pick-a-color-logo-transparent-dark.png
+        ├── pick-a-color-logo-transparent-light.png
+        ├── search-dark.png
+        └── search-light.png
+```
       
 </details>
 
