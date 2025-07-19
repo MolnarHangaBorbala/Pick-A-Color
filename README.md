@@ -82,6 +82,12 @@ Illeszd be a saját kulcsaidat a `jsColor.js` fájlban a `unsplashKey` és `pexe
 - **Pipetta ikon:** [`Flaticon`](https://www.flaticon.com/free-icon/dropper_9210683?term=pipette&page=3&position=84&origin=tag&related_id=9210683) + Szinezés
 </details>
 
+<details>
+      <summary>Fájl struktúra</summary>
+
+      
+</details>
+
 ---
 
 ## Jövőbeli fejlesztések
